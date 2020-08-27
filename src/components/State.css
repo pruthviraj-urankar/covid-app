@@ -1,0 +1,50 @@
+.state-container{
+    font-family: "archia";
+    width:550px;
+  }
+  .col-left{
+    float:left;
+    width:40%; 
+  }
+  
+  .col-right{
+    color:rgba(32,26,162,.866667);
+    float:right;
+    width:30%;
+  }
+  
+  .state-name{
+    text-align:center;
+    color:red;
+    background-color:pink;
+    font-size:22px
+  }
+  
+  .tested{
+    font-size:12px;
+    text-align:right;
+  }
+  
+  .tested-value{
+    text-align:right;
+    font-size:21px;
+  }
+  
+  .row{
+    clear:both;
+    display:auto;
+    height:30px;
+  }
+  
+  
+  .time-display{
+    text-align:center;
+    font-size:12px;
+  }
+  .main-state-container{
+        text-align: center;
+        justify-content: center;
+        margin-top: 18px;
+        margin-left: 400px;
+        
+  }

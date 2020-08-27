@@ -1,0 +1,61 @@
+.column {
+    float: left;
+    width: 25%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    display: table;
+    clear: both;
+  }
+  
+  .data-holder{
+    font-family: "archia";
+    text-align:center;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 11rem;
+    z-index: 10;
+    position: relative;
+  }
+  .row-data{
+    margin-top:10px;
+    height:20px;
+    font-size:12px;
+    text-align:center
+  }
+  
+  .case-data{
+    margin-top:1px;
+    height:35px;
+    justify-content:center;
+    text-align:center;
+    font-size: 21px;
+  }
+  
+  .is-confirmed{
+    background-color:#ff073a20;
+    color:red;
+  }
+  
+  .is-active{
+    background-color:#007bff10;
+    color:blue;
+  }
+  
+  .is-recovered{
+    background-color:#28a74520;
+    color:green;
+  }
+  
+  .is-deceased{
+    background-color:#6c757d20;
+    colour:#6c757d;
+  }
+
+  svg{
+    transition: all 0.3s ease-in-out;
+  }
+  
+  
+  
