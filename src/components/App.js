@@ -5,7 +5,7 @@ import State from './State';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import { fetchCovidData } from "../covidData/fetchData";
-import {fetchCovidUpdates} from "../covidUpdates/fetchUpdates";
+import { fetchCovidUpdates } from "../covidUpdates/fetchUpdates";
 import Home from './Home';
 import NavBar from "../common/NavBar";
 import ErrorPage from './ErrorPage'
@@ -18,31 +18,31 @@ class App extends React.Component {
     this.props.fetchCovidData();
     this.props.fetchCovidUpdates();
   }
-  renderList(){
+  renderList() {
     return this.props.covidData
   }
   render() {
-    return(
-    <div>
-      <BrowserRouter>
-        <Route path="/" component={NavBar}/>
+    return (
+      <div>
+        <BrowserRouter>
+          <Route component={NavBar} />
           <div>
             <div className="searchClass" >
-            <Route path="/" component={SearchBar}/>
+              <Route component={SearchBar} />
             </div>
           </div>
-        <Switch>
-          <Route  exact path="/" component={Home}/>
-          <Route  path="/state/:id" component={State}/>
-          <Route exact path="/error404" component={ErrorPage}/>
-          <Route component={ErrorPage}/>
-        </Switch>
-      </BrowserRouter>
-    </div>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/state/:id" component={State} />
+            <Route exact path="/error404" component={ErrorPage} />
+            <Route component={ErrorPage} />
+          </Switch>
+        </BrowserRouter>
+      </div>
     );
   }
 }
 
 
 
-export default connect(null, { fetchCovidData,fetchCovidUpdates})(App);
+export default connect(null, { fetchCovidData, fetchCovidUpdates })(App);
